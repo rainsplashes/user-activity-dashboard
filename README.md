@@ -1,6 +1,6 @@
 # User Activity Dashboard
 
-A full‑stack example demonstrating:
+A throughly commented full‑stack example demonstrating:
 
 - **Go** backend serving raw user data at `/api/users`.
 - **React + TypeScript** frontend with **Material‑UI** to fetch, compute, filter, and display that data.
@@ -12,12 +12,12 @@ A full‑stack example demonstrating:
 ```
 / (root)
 │
-├── api/                     # Go backend
+├── user-table-backend/      # Go backend
 │   ├── main.go              # HTTP handler and server
 │   ├── main_test.go         # Go unit tests for handler
 │   └── go.mod               # Go module file
 │
-└── frontend/                # React + TS frontend
+└── user-table-frontend/     # React + TS frontend
     ├── package.json         # npm manifest & proxy
     ├── tsconfig.json        # TypeScript config
     ├── public/              # Static assets
