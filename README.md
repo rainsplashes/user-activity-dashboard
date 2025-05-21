@@ -7,31 +7,6 @@ A throughly commented full‑stack example demonstrating:
 
 ---
 
-## 📂 Repository Structure
-
-```
-/ (root)
-│
-├── user-table-backend/      # Go backend
-│   ├── main.go              # HTTP handler and server
-│   ├── main_test.go         # Go unit tests for handler
-│   └── go.mod               # Go module file
-│
-└── user-table-frontend/     # React + TS frontend
-    ├── package.json         # npm manifest & proxy
-    ├── tsconfig.json        # TypeScript config
-    ├── public/              # Static assets
-    └── src/                 # Application code
-        ├── index.tsx
-        ├── App.tsx
-        └── components/
-            └── UsersTable.tsx
-```
-
-> **Exclude**: `node_modules/`, `frontend/build/`, Go binaries, IDE configs.
-
----
-
 ## 🚀 Prerequisites
 
 - **Go** ≥1.20
@@ -58,8 +33,7 @@ go mod tidy
 go run main.go
 ```
 
-- Open: http://localhost:8080/api/users
-- Returns: JSON array of raw user records
+- Backend server now running at http://localhost:8080
 
 ### 3. Run Frontend (React)
 
@@ -71,7 +45,7 @@ npm install
 npm start
 ```
 
-- Open: http://localhost:3000
+- Web Server now running at http://localhost:3000
 - Proxy: `package.json` forwards `/api` to backend
 
 ---
@@ -87,7 +61,7 @@ go test -v
 
 ## 💡 Design Notes & Trade‑offs
 
-- **Client‑side live computation**: `daysSince*` calculated in client to simplfy server logic and we want to display data in relation to client time, not server time.
+- **Client‑side live computation**: `daysSince*` calculated in client to simplify server logic and we want to display data in relation to client time, not server time.
 - **Hard‑coded data**: Go server uses hard-coded user data, which should be swapped to a proper database in a real application.
 - **TypeScript**: Ensures type safety in frontend webpage.
 - **Material‑UI**: Provides nice looking and responsive UI components.
